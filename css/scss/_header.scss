@@ -1,0 +1,29 @@
+@import 'color';
+
+header {
+  width: 300px;
+  padding: 40px 45px;
+  // background-color: skyblue;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .site-title {
+
+
+    img {
+      width: 200px;
+    }
+  }
+
+  ul {
+    li {
+      margin-top: 16px;
+      font-size: 0.875rem;
+    }
+  }
+
+  .sns-link {
+    padding-top: 60px;
+  }
+}

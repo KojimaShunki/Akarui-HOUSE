@@ -1,0 +1,42 @@
+@import 'color';
+
+footer {
+  background-color: $font-color;
+  color: #fff;
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    li {
+      font-size: 0.875rem;
+      padding: 0 20px;
+
+      &:not(:last-child) {
+        border-right: #fff 1px solid;
+      }
+    }
+  }
+
+  p {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+}
+
+
+
+@media (max-width: 960px) {
+  footer {
+    ul {
+      flex-wrap: wrap;
+
+      li {
+        margin-bottom: 10px;
+       }
+    }
+  }
+}

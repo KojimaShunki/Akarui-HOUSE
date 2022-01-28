@@ -3,17 +3,21 @@
 header {
   width: 300px;
   padding: 40px 45px;
-  // background-color: skyblue;
   position: fixed;
   top: 0;
   left: 0;
 
   .site-title {
+    line-height: 0;
 
+    a {
+      display: inline-block;
 
-    img {
-      width: 200px;
+      img {
+        width: 200px;
+      }
     }
+
   }
 
   ul {
@@ -25,5 +29,131 @@ header {
 
   .sns-link {
     padding-top: 60px;
+  }
+}
+
+
+
+@media (max-width: 960px) {
+  header {
+    height: 72px;
+    width: 100%;
+    padding: 0;
+    padding-left: 18px;
+    background-color: #fff;
+    z-index: 50;
+
+    .site-title {
+      a {
+        margin-top: 10px;
+        // margin-left: 18px;
+
+        img {
+          width: 180px;
+        }
+      }
+    }
+
+    .navi {
+      display: none;
+    }
+
+    .humberger-menu {
+      display: block;
+      width: 30px;
+      height: 30px;
+      // margin: 22px 18px 0;
+      margin-top: 22px;
+      margin-right: 18px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 70;
+      cursor: pointer;
+      transition: 0.4s;
+      // padding-top: 10px;
+      /* position: relative; */
+    }
+    
+    .humberger-menu span {
+      width: 30px;
+      height: 2px;
+      background-color: $font-color;
+      position: absolute;
+      left: 0;
+      transition: 0.4s ease-in-out;
+    }
+    
+    .humberger-menu span:nth-child(1) {
+      top: 4px;
+    }
+    
+    .humberger-menu span:nth-child(2) {
+      top: 14px;
+    }
+    
+    .humberger-menu span:nth-child(3) {
+      top: 24px;
+    }
+    
+    .humberger-menu.active span:nth-child(1) {
+      top: 14px;
+      left: 0;
+      background: #fff;
+      transform: rotate(-405deg);
+    }
+    
+    .humberger-menu.active span:nth-child(2) {
+      display: none;
+    }
+
+    .humberger-menu.active span:nth-child(3) {
+      top: 14px;
+      left: 0;
+      background: #fff;
+      transform: rotate(405deg);
+    }
+
+    .shadow {
+      width: 100%;
+      height: 100vh;
+      background-color: #000;
+      opacity: 0.7;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 60;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    
+
+    #humberger-navigation {
+      width: 300px;
+      height: 100vh;
+      background-color: #fff;
+      color: $font-color;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 70;
+      opacity: 0;
+      transform: translateX(-300px);
+      transition: 0.8s;
+      visibility: hidden;
+      padding: 20px 0 0 20px;
+    }
+    
+    #humberger-navigation.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
   }
 }

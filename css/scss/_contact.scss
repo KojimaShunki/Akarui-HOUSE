@@ -1,0 +1,77 @@
+@import 'color';
+
+.contact {
+  .sec-title::before,
+  .sec-title::after {
+    background-color: $font-color;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+
+    li {
+      width: 30%;
+      
+
+      a {
+        display: block;
+        text-align: center;
+        border: $font-color 1px solid;
+        margin: 2px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        position: relative;
+
+        &:hover {
+          border: $font-color 3px solid;
+          margin: 0;
+        }
+
+        &::after {
+          content: '';
+          width: 0;
+          height: 0;
+          border: $font-color 14px solid;
+          border-left-color: transparent;
+          border-bottom-color: transparent;
+          border-right-color: transparent;
+          transform: rotate(-45deg);
+          position: absolute;
+          bottom: -10px;
+          right: -10px;
+        }
+
+        img {
+          width: 64px;
+          height: 64px;
+        }
+
+        p {
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 960px) {
+  .contact {
+    ul {
+      margin-top: 30px;
+      flex-direction: column;
+
+      li {
+        width: 60%;
+        margin: 0 auto;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@ html {
 
 body {
   color: $font-color;
-  // display: flex;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 img {
@@ -33,6 +33,113 @@ li {
     padding: 0 20px;
     max-width: 900px;
     margin: 0 auto;
-    // background-color: orange;
+  }
+
+  .bg-bk {
+    margin-top: 600px;
+    background: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.8));
+    background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.8));
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+  }
+
+  .bg-wh {
+    width: 100%;
+    background-color: #fff;
+  }
+}
+
+
+
+.sec-title {
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+
+  &::before {
+    content: '';
+    height: 1px;
+    width: 28%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+  &::after {
+    content: '';
+    height: 1px;
+    width: 28%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+  }
+}
+
+section {
+  padding-bottom: 160px;
+}
+
+video {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 300px;
+  right: 0;
+  z-index: -30;
+}
+
+#page_top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
+  a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: $font-color;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 48px;
+    border: #fff 1px solid;
+  
+    &::before{
+      font-family: "Font Awesome 5 Free";
+      content: '\f106';
+      font-weight: 900;
+      font-size: 25px;
+      color: #fff;
+      width: 25px;
+      height: 25px;
+      margin: auto;
+    }
+
+  }
+}
+
+
+
+@media (max-width: 960px) {
+  .container {
+    width: 100%;
+    margin-left: auto;
+
+    .content {
+      width: 100%;
+    }
+  }
+
+  .sec-title {
+    margin-bottom: 30px;
+  }
+
+  section {
+    padding-bottom: 120px;
+  }
+
+  video {
+    top: 72px;
+    left: 0;
+    width: 200%;
   }
 }

@@ -64,8 +64,9 @@
 
       .rect::before {
         content: '';
-        display: block;
+        // display: block;
         border-top: #414141 30px solid;
+        border-bottom: none;
         border-left: transparent 100px solid;
         border-right: transparent 100px solid;
         position: absolute;

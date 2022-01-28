@@ -119,6 +119,10 @@ video {
   }
   .sec-title {
     margin-bottom: 30px;
+    font-size: 1.25rem;
+  }
+  .sec-title::before, .sec-title::after {
+    width: 60px;
   }
   section {
     padding-bottom: 120px;

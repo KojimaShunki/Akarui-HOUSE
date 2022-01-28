@@ -131,6 +131,12 @@ video {
 
   .sec-title {
     margin-bottom: 30px;
+    font-size: 1.25rem;
+
+    &::before,
+    &::after {
+      width: 60px;
+    }
   }
 
   section {

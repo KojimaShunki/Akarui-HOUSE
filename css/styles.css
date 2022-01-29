@@ -448,76 +448,53 @@ header .sns-link {
 }
 
 .flow .flex .figure {
-  width: 200px;
   position: relative;
 }
 
-.flow .flex .figure .yellow {
-  height: 600px;
+.flow .flex .figure::before {
+  content: "";
   width: 50px;
-  background-color: #FFDD00;
+  height: 600px;
+  background-color: #ffdd00;
   position: absolute;
   top: 0;
   left: 75px;
-  right: 75px;
 }
 
 .flow .flex .figure .rect {
   width: 200px;
   height: 80px;
-  background-color: #414141;
-  position: absolute;
-  left: 0;
-  right: 0;
-  text-align: center;
   line-height: 80px;
+  background-color: #414141;
   color: #fff;
   font-size: 0.875rem;
+  margin-bottom: 60px;
   position: relative;
-}
-
-.flow .flex .figure .rect:nth-of-type(2) {
-  top: 0;
-}
-
-.flow .flex .figure .rect:nth-of-type(3) {
-  top: 60px;
-}
-
-.flow .flex .figure .rect:nth-of-type(4) {
-  top: 120px;
-}
-
-.flow .flex .figure .rect:nth-of-type(5) {
-  top: 180px;
-}
-
-.flow .flex .figure .rect:nth-of-type(6) {
-  top: 240px;
+  text-align: center;
 }
 
 .flow .flex .figure .rect::before {
-  content: '';
-  border-top: #414141 30px solid;
-  border-bottom: none;
-  border-left: transparent 100px solid;
-  border-right: transparent 100px solid;
+  content: "";
+  border-top: 30px solid #414141;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
   position: absolute;
   top: 80px;
-  left: 0;
   right: 0;
+  left: 0;
+  margin: 0 auto;
 }
 
-.flow .flex ol {
+.flow .flex .letter {
   max-width: calc(100% - 280px);
   counter-reset: number;
 }
 
-.flow .flex ol li {
+.flow .flex .letter li {
   position: relative;
 }
 
-.flow .flex ol li::before {
+.flow .flex .letter li::before {
   content: counter(number);
   counter-increment: number;
   padding: 0.2em 0.8em 0;
@@ -528,7 +505,7 @@ header .sns-link {
   z-index: 1;
 }
 
-.flow .flex ol li::after {
+.flow .flex .letter li::after {
   content: '';
   position: absolute;
   display: block;
@@ -540,11 +517,11 @@ header .sns-link {
   background-color: #414141;
 }
 
-.flow .flex ol li:not(:last-child) {
+.flow .flex .letter li:not(:last-child) {
   margin-bottom: 44px;
 }
 
-.flow .flex ol li h3 {
+.flow .flex .letter li h3 {
   font-size: 1.25rem;
   font-weight: normal;
   padding-bottom: 8px;
@@ -563,29 +540,24 @@ header .sns-link {
             flex-direction: column;
   }
   .flow .flex .figure {
-    width: 100%;
+    margin-bottom: 80px;
   }
-  .flow .flex .figure .yellow {
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+  .flow .flex .figure::before {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
   .flow .flex .figure .rect {
-    width: 80%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    width: calc(100vw - 80px);
+    margin-left: auto;
+    margin-right: auto;
   }
   .flow .flex .figure .rect::before {
-    border-left-width: calc(40vw - 16px);
-    border-right-width: calc(40vw - 16px);
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    border-left: calc(50vw - 40px) solid transparent;
+    border-right: calc(50vw - 40px) solid transparent;
   }
-  .flow .flex ol {
+  .flow .flex .letter {
     max-width: 100%;
-    padding-top: 320px;
     padding-left: 50px;
   }
 }

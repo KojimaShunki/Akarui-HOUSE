@@ -154,6 +154,106 @@ header .site-title a img {
   width: 200px;
 }
 
+header .humberger-menu {
+  display: none;
+  width: 30px;
+  height: 30px;
+  margin-top: 22px;
+  margin-right: 18px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 70;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+header .humberger-menu span {
+  width: 30px;
+  height: 2px;
+  background-color: #121212;
+  position: absolute;
+  left: 0;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+header .humberger-menu span:nth-child(1) {
+  top: 4px;
+}
+
+header .humberger-menu span:nth-child(2) {
+  top: 14px;
+}
+
+header .humberger-menu span:nth-child(3) {
+  top: 24px;
+}
+
+header .humberger-menu.active span {
+  top: 14px;
+  left: 0;
+  background: #fff;
+}
+
+header .humberger-menu.active span:nth-child(1) {
+  -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+}
+
+header .humberger-menu.active span:nth-child(2) {
+  display: none;
+}
+
+header .humberger-menu.active span:nth-child(3) {
+  -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+}
+
+header .shadow {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 60;
+  display: none;
+}
+
+header .shadow.active {
+  display: block;
+}
+
+header #humberger-navigation {
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  color: #121212;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 70;
+  opacity: 0;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  visibility: hidden;
+  padding: 20px 0 0 20px;
+}
+
+header #humberger-navigation.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 header ul li {
   margin-top: 16px;
   font-size: 0.875rem;
@@ -183,92 +283,6 @@ header .sns-link {
   }
   header .humberger-menu {
     display: block;
-    width: 30px;
-    height: 30px;
-    margin-top: 22px;
-    margin-right: 18px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 70;
-    cursor: pointer;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    /* position: relative; */
-  }
-  header .humberger-menu span {
-    width: 30px;
-    height: 2px;
-    background-color: #121212;
-    position: absolute;
-    left: 0;
-    -webkit-transition: 0.4s ease-in-out;
-    transition: 0.4s ease-in-out;
-  }
-  header .humberger-menu span:nth-child(1) {
-    top: 4px;
-  }
-  header .humberger-menu span:nth-child(2) {
-    top: 14px;
-  }
-  header .humberger-menu span:nth-child(3) {
-    top: 24px;
-  }
-  header .humberger-menu.active span:nth-child(1) {
-    top: 14px;
-    left: 0;
-    background: #fff;
-    -webkit-transform: rotate(-405deg);
-            transform: rotate(-405deg);
-  }
-  header .humberger-menu.active span:nth-child(2) {
-    display: none;
-  }
-  header .humberger-menu.active span:nth-child(3) {
-    top: 14px;
-    left: 0;
-    background: #fff;
-    -webkit-transform: rotate(405deg);
-            transform: rotate(405deg);
-  }
-  header .shadow {
-    width: 100%;
-    height: 100vh;
-    background-color: #000;
-    opacity: 0.7;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 60;
-    display: none;
-  }
-  header .shadow.active {
-    display: block;
-  }
-  header #humberger-navigation {
-    width: 300px;
-    height: 100vh;
-    background-color: #fff;
-    color: #121212;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 70;
-    opacity: 0;
-    -webkit-transform: translateX(-300px);
-            transform: translateX(-300px);
-    -webkit-transition: 0.8s;
-    transition: 0.8s;
-    visibility: hidden;
-    padding: 20px 0 0 20px;
-  }
-  header #humberger-navigation.active {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
   }
 }
 
